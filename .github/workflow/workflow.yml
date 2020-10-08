@@ -1,0 +1,12 @@
+name: Pushover Action Tester External
+on: push
+jobs:
+  pushover-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pushover-actions
+        uses: spookfish/pushover-actions@v1.0.4
+        with:
+          token: ${{ secrets.PUSHOVER_TOKEN }}
+          user: ${{ secrets.PUSHOVER_USER }}
+          message: 'from github workflow with love external'
